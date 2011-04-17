@@ -179,9 +179,8 @@
 			MinFrameworkVersion="131072"
 		/>
 		<AssemblyReference
-			RelativePath="MySql.Data.dll"
+			RelativePath="..\Debug\MySql.Data.dll"
 			AssemblyName="MySql.Data, Version=6.2.4.0, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL"
-			CopyLocal="true"
 			MinFrameworkVersion="131072"
 		/>
 		<AssemblyReference

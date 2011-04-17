@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 using namespace System;
 using namespace System::Data;
 using namespace MySql::Data::MySqlClient;

@@ -28,6 +28,7 @@ public:
 	int			getRole			();
 	Course**	getClasses		();
 	int			getClassCount	();
+	int			getID			();
 	
 private:
 

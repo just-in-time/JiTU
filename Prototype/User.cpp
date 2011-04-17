@@ -46,6 +46,10 @@ int User::getRole() {
 	return role;
 }
 
+int User::getID(){
+	return this->id;
+}
+
 void User::addClass(Course * classIn) {
 	Course** temp = classes;
 	classes = new Course*[classCount + 1];

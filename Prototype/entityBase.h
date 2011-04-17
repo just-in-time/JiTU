@@ -12,6 +12,7 @@ public:
 	MySqlConnection^ Connection;
 	MySqlCommand^ Command;
 	MySqlDataAdapter^ DataAdapter;
+	MySqlDataReader^ DataReader;
 
 	void AddParameter(String^, MySqlDbType, int, Object^);
 	void CloseConnection();

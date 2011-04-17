@@ -18,12 +18,20 @@ void User::setUsername(std::string newUsername) {
 	*(this->username) = newUsername; 
 }
 
+void User::setFullName(std::string newFullName){
+	*(this->fullname) = newFullName;
+}
+
 void User::setPassword(std::string newPassword) {
 	*(this->password) = newPassword;
 }
 
 string User::getUsername() {
 	return *(this->username);
+}
+
+string User::getFullName(){
+	return *(this->fullname);
 }
 
 string User::getPassword() {

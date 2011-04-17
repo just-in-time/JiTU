@@ -4,7 +4,7 @@ using namespace MySql::Data::MySqlClient;
 
 entityBase::entityBase(void)
 {
-	this->Connection = gcnew MySqlConnection("server=127.0.0.1;Uid=app_user;Pwd=rk1234;database=rkcrm;Pooling=False");
+	this->Connection = gcnew MySqlConnection("server=127.0.0.1;Uid=app_user;Pwd=rk1234;database=jitt;Pooling=False");
 }
 
 void entityBase::AddParameter(System::String ^ name, MySql::Data::MySqlClient::MySqlDbType type, int size, System::Object ^ value)

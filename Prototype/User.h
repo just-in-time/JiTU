@@ -16,6 +16,7 @@ public:
 
 	/** Setters **/
 	void		setUsername		(string);
+	void	    setFullName		(string);
 	void		setPassword		(string);
 	void		setRole			(int);
 	void		addClass		(Course*);
@@ -23,6 +24,7 @@ public:
 	/** Getters **/
 	string		getUsername		();
 	string		getPassword		();
+	string      getFullName		();
 	int			getRole			();
 	Course**	getClasses		();
 	int			getClassCount	();
@@ -34,6 +36,7 @@ private:
 	int			role;
 	int			classCount;
 	string*		username;
+	string*		fullname;
 	string*		password;
 	Course**	classes;	
 

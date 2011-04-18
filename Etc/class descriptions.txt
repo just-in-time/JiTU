@@ -1,0 +1,85 @@
+-------------------------------------------------------------------------------
+Boundary Classes:
+-------------------------------------------------------------------------------
+	Class MainMenu:
+		system class
+	
+	Class ToolStripMenuItem:
+		system class
+	
+	Class GeneralUI:
+		Container class for all sub-UI classes.
+		
+	Class SplitContainer:
+		system class
+		
+	Class ActivityMenu:
+		base menu class
+	
+	Class InstructorMenu:
+		Inherits ActivityMenu, provides user with buttons to control instructor
+		activities.
+	
+	Class StudentMenu:
+		Inherits ActivityMenu, provides user with buttons to control student
+		activities.
+	
+	Class ContentPanel:
+		base class for content management.
+		
+	Class ManageUsers:
+		Inherits ContentPanel, provides functionality to manage user objects
+		
+	Class TakeQuiz:
+		Inherits ContentPanel, provides functionality to take quizes.
+		
+	Class ManageQuizes:
+		Inherits ContentPanel, provides functionality to manage quizes.
+		
+	Class ViewResults:
+		Inherits ContentPanel, provides functionality to view results of quizes
+		taken by students.
+
+-------------------------------------------------------------------------------	
+Control Classes:
+-------------------------------------------------------------------------------
+	Class LoginController:
+		Provides functionality for user to log in. Communicates between login
+		panel and the server.
+		
+	Class ManageUsersController:
+		Provides functionality for admin user to manage other user objects.
+		Communicate	between the ManageUser content panel and the server and
+		user entity class.
+		
+	Class TakeQuizController:
+		Provides functionality for student user to take quiz. Communicates
+		between	the TakeQuiz content panel and the server and the Answers class.
+		
+	Class ManageQuizController:
+		Provides functionality for admin user to manage quiz classes. Allows to
+		edit and delete. Communicates between ManageQuiz content panel and the
+		server.
+		
+	Class ViewResultsController:
+		Provides functionality for admin users to view statistical data on quiz
+		objects. Communicates with Quizes and Answers etity classes and
+		ViewResults content panel.
+
+-------------------------------------------------------------------------------
+Etity Classes:
+-------------------------------------------------------------------------------
+	Class User:
+		contains user data specific to identification.
+		
+	Class Courses:
+		Contains course data. Contains collection of students.
+		
+	Class Quiz:
+		Contains quiz data. Contains a collection of questions.
+		
+	Class Questions:
+		Contains questions data. Contains a collection of answers.
+		
+	Class Answers:
+		Contains answer data. Stores results as well.

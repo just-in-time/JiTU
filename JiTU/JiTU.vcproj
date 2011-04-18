@@ -254,6 +254,10 @@
 					RelativePath=".\SecurityControl.cpp"
 					>
 				</File>
+				<File
+					RelativePath=".\UserController.cpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
@@ -322,6 +326,10 @@
 				>
 				<File
 					RelativePath=".\SecurityControl.h"
+					>
+				</File>
+				<File
+					RelativePath=".\UserController.h"
 					>
 				</File>
 			</Filter>

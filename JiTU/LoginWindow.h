@@ -3,7 +3,8 @@
 
 #include "stdafx.h"
 #include "User.h"
-#include "SecurityControl.h"
+//#include "SecurityControl.h"
+#include "UserController.h"
 
 #define CENTER_HEIGHT	(250)
 #define CENTER_WIDTH	(400)
@@ -46,12 +47,14 @@ private:
 	Drawing::Image^ loginButtonBack;
 
 	User** mainUser;
-	SecurityControl* loginController;
+	//SecurityControl* loginController; //old code
+	UserController^ userController;
 
 	void initializeComponents();	
 	void resized(Object^, EventArgs^);
 	void login (Object^, EventArgs^);
 	void login (Object^, KeyEventArgs^);
+	void login (); //gets called by other logins
 };
 
 #endif

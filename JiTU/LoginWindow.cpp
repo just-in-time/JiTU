@@ -108,17 +108,30 @@ void LoginWindow::resized (Object^ sender, EventArgs^ e)	{
 }
 
 void LoginWindow::login(System::Object ^, System::EventArgs ^) {
-	loginController = new SecurityControl(mainUser);
-	if (loginController->checkUsername(usernameBox->Text))
-		if (loginController->checkPassword(passwordBox->Text))
-			delete this;
+	login();
 }
 
 void LoginWindow::login(System::Object ^ se, System::Windows::Forms::KeyEventArgs ^ e) {
 	if (e->KeyCode == Keys::Enter) {
-		loginController = new SecurityControl(mainUser);
-		if (loginController->checkUsername(usernameBox->Text))
-			if (loginController->checkPassword(passwordBox->Text))
-				delete this;
+		login();
 	}
+}
+
+void LoginWindow::login() {
+	/* OLD CODE
+	loginController = new SecurityControl(mainUser);
+	if (loginController->checkUsername(usernameBox->Text))
+		if (loginController->checkPassword(passwordBox->Text))
+			delete this;
+	*/
+	
+
+	/* NEW CODE
+	userController = gcnew UserController(mainUser);
+	userController->isValidUser(usernameBox->Text);
+	*/
+
+	(*mainUser) = new User(0);
+	(*mainUser)->setRole(1);
+	delete this;
 }

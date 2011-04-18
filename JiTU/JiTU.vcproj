@@ -333,7 +333,11 @@
 			>
 		</Filter>
 		<File
-			RelativePath="..\ClassDiagram.vsd"
+			RelativePath="..\Etc\class descriptions.txt"
+			>
+		</File>
+		<File
+			RelativePath="..\Etc\ClassDiagram.vsd"
 			>
 		</File>
 	</Files>

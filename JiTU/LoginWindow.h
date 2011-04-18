@@ -20,8 +20,15 @@ ref class LoginWindow : Panel {
 
 
 public:
-	LoginWindow(int, int, User**);
-
+	/**
+	 *	Constructor for class, initializes all controls placed on
+	 *	the LoginWindow Panel
+     *
+	 *	@param xIn The width of the window
+	 *	@param yIn The height of the window
+	 *	@param userIn Pointer to user object to be loged in 
+	 */
+	LoginWindow(int xIn, int yIn, User** userIn);
 	
 private:
 	Panel^			container;

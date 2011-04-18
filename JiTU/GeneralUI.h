@@ -22,6 +22,10 @@ using namespace System::Windows;
 using namespace System::Windows::Forms;
 
 
+/**
+ *	The base UI which controls all other UI elements.
+ *	User starts here
+ */
 ref class GeneralUI : System::Windows::Forms::Form {
 
 

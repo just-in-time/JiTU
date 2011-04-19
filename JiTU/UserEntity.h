@@ -11,4 +11,5 @@ public:
 	void UpdateUser(User *);
 	void DeleteUser(User *);
 	User * GetUser(String^);
+	User * GetUser(int);
 };

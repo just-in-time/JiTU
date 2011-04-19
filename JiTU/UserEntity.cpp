@@ -117,3 +117,42 @@ User * UserEntity::GetUser(System::String ^ UserName)
 
 	return newUser;
 }
+
+User * UserEntity::GetUser(int UserID)
+{
+	User * newUser;
+
+	try
+	{
+		this->SQL = "SELECT * FROM `users` u WHERE u.`user_id` = " + UserID + ";";
+		this->InitializeCommand();
+		this->OpenConnection();
+
+		this->DataReader = this->Command->ExecuteReader();
+
+		if (this->DataReader->HasRows)
+		{
+			this->DataReader->Read();
+
+			newUser = new User((int)this->DataReader["user_id"]);
+			newUser->setFullName(*(ManagedToStd::toStd(this->DataReader["full_name"]->ToString())));
+			newUser->setPassword(*(ManagedToStd::toStd(this->DataReader["password"]->ToString())));
+			newUser->setRole((int)this->DataReader["role_id"]);
+			newUser->setUsername(*(ManagedToStd::toStd(this->DataReader["user_name"]->ToString())));
+		}
+		else
+			throw gcnew System::Exception("The user ID \"" + UserID + "\" was not found in the database.");
+
+	}
+	catch(System::Exception^ e)
+	{
+		throw gcnew System::Exception(e->Message, e->InnerException);
+	}
+	finally
+	{
+		this->CloseConnection();
+	}
+
+
+	return newUser;
+}

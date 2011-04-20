@@ -82,12 +82,13 @@ ManageQuizList::ManageQuizList(Course* courseIn) : SplitContainer() {
 
 	this->AutoScroll = true;
 	this->Dock = DockStyle::None;
-	this->Panel1MinSize = 15;
+	this->Panel1MinSize = 10;
 	this->Orientation = Forms::Orientation::Horizontal;
-	this->SplitterDistance = 15;
+	this->SplitterDistance = 10;
 	this->IsSplitterFixed = true;
 	Panel2->BackColor = Color::FromArgb(0xffdddddd);
-	Panel1->BackColor = Color::Blue;
+	Panel1->BackColor = Color::FromArgb(0xffaaaaaa);
+	BackColor = Color::FromArgb(0xff999999);
 
 
 	quizPanel = gcnew ListView();
@@ -118,6 +119,13 @@ ManageQuizList::ManageQuizList(Course* courseIn) : SplitContainer() {
 	quizPanel->ShowGroups = true;
 
 	createQuizButton = gcnew Button();
+	createQuizButton->Text = gcnew String("Add Quiz");
+	createQuizButton->Font = gcnew Drawing::Font("Times New Roman", 12, FontStyle::Regular, GraphicsUnit::Pixel);
+	createQuizButton->Dock = DockStyle::Left;
+	createQuizButton->FlatStyle = FlatStyle::Popup;
+	createQuizButton->BackColor = Color::FromArgb(0xffcccccc);
+
+	Panel1->Controls->Add(createQuizButton);
 
 
 	Panel2->Controls->Add(quizPanel);

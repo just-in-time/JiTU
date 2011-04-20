@@ -14,6 +14,7 @@ UserController::UserController(User ** userIn)
 	userEntity = gcnew UserEntity(); //creates our user entity to be used
 									 // in this controller
 
+
 }
 
 bool UserController::isValidUser(System::String ^userName)
@@ -24,9 +25,10 @@ bool UserController::isValidUser(System::String ^userName)
 	}
 	catch (MySqlException^ e)
 	{
+		*user = NULL;
 		throw gcnew System::Exception(e->Message, e->InnerException);
 	}
 	
 
-	return true;
+	return (*user != NULL);
 }

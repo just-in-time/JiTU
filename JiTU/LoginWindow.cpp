@@ -126,12 +126,9 @@ void LoginWindow::login() {
 	*/
 	
 
-	/* NEW CODE
 	userController = gcnew UserController(mainUser);
 	userController->isValidUser(usernameBox->Text);
-	*/
-
-	(*mainUser) = new User(0);
-	(*mainUser)->setRole(1);
+	
+	
 	delete this;
 }

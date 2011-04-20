@@ -4,6 +4,11 @@ using namespace System;
 using namespace System::Data;
 using namespace MySql::Data::MySqlClient;
 
+
+#ifndef HOST
+#define HOST ("97.74.31.93")
+#endif
+
 ref class entityBase abstract //: System::IDisposable
 {
 public:

@@ -132,55 +132,56 @@ void LoginWindow::login() {
 	delete this;
 
 	} catch(Exception^ e) {
-		  // Create a new instance of the form.
-		  Form^ form1 = gcnew Form;
-		  // Create two buttons to use as the accept and cancel buttons.
-		  Button^ button1 = gcnew Button;
-		  Button^ button2 = gcnew Button;
+		  //// Create a new instance of the form.
+		  //Form^ form1 = gcnew Form;
+		  //// Create two buttons to use as the accept and cancel buttons.
+		  //Button^ button1 = gcnew Button;
+		  //Button^ button2 = gcnew Button;
 
-		  form1->SuspendLayout();
+		  //form1->SuspendLayout();
 
-		  Label^ mainMessage = gcnew Label();
-		  mainMessage->Text = e->Message;
-		  
-		  form1->Controls->Add(mainMessage);
-		  mainMessage->Anchor = Forms::AnchorStyles::None;
-		  mainMessage->Padding = Forms::Padding(20);
-		  mainMessage->AutoSize = true;
+		  //Label^ mainMessage = gcnew Label();
+		  //mainMessage->Text = e->Message;
+		  //
+		  //form1->Controls->Add(mainMessage);
+		  //mainMessage->Anchor = Forms::AnchorStyles::None;
+		  //mainMessage->Padding = Forms::Padding(20);
+		  //mainMessage->AutoSize = true;
 
-		  // Set the text of button1 to "OK".
-		  button1->Text = "OK";
-		  // Set the position of the button on the form.
-		  button1->Location = Point((form1->Width - 2 * (button1->Width + 40)),(form1->Height - (button1->Height + 40)));
-		  // Set the text of button2 to "Cancel".
-		  button2->Text = "Cancel";
-		  // Set the position of the button based on the location of button1.
-		  button2->Location =
-			  Point( button1->Location.X + 20 + button1->Width, button1->Location.Y);
-		  // Set the caption bar text of the form.   
-		  form1->Text = "Error";
-		  // Display a help button on the form.
+		  //// Set the text of button1 to "OK".
+		  //button1->Text = "OK";
+		  //// Set the position of the button on the form.
+		  //button1->Location = Point((form1->Width - 2 * (button1->Width + 40)),(form1->Height - (button1->Height + 40)));
+		  //// Set the text of button2 to "Cancel".
+		  //button2->Text = "Cancel";
+		  //// Set the position of the button based on the location of button1.
+		  //button2->Location =
+			 // Point( button1->Location.X + 20 + button1->Width, button1->Location.Y);
+		  //// Set the caption bar text of the form.   
+		  //form1->Text = "Error";
+		  //// Display a help button on the form.
 
-		  // Define the border style of the form to a dialog box.
-		  form1->FormBorderStyle = ::FormBorderStyle::FixedDialog;
-		  // Set the MaximizeBox to false to remove the maximize box.
-		  form1->MaximizeBox = false;      
-		  // Set the MinimizeBox to false to remove the minimize box.
-		  form1->MinimizeBox = false;
-		  // Set the accept button of the form to button1.
-		  form1->AcceptButton = button1;
+		  //// Define the border style of the form to a dialog box.
+		  //form1->FormBorderStyle = ::FormBorderStyle::FixedDialog;
+		  //// Set the MaximizeBox to false to remove the maximize box.
+		  //form1->MaximizeBox = false;      
+		  //// Set the MinimizeBox to false to remove the minimize box.
+		  //form1->MinimizeBox = false;
+		  //// Set the accept button of the form to button1.
+		  //form1->AcceptButton = button1;
 
-		  form1->CancelButton = button1;
-		  // Set the cancel button of the form to button2.
-		  // Set the start position of the form to the center of the screen.
-		  form1->StartPosition = FormStartPosition::CenterScreen;
-		  form1->ResumeLayout();
-		  // Add button1 to the form.
-		  form1->Controls->Add( button1 );
-		  // Add button2 to the form.
-		  form1->Controls->Add( button2 );
-		  // Display the form as a modal dialog box.
-		  form1->ShowDialog();
+		  //form1->CancelButton = button1;
+		  //// Set the cancel button of the form to button2.
+		  //// Set the start position of the form to the center of the screen.
+		  //form1->StartPosition = FormStartPosition::CenterScreen;
+		  //form1->ResumeLayout();
+		  //// Add button1 to the form.
+		  //form1->Controls->Add( button1 );
+		  //// Add button2 to the form.
+		  //form1->Controls->Add( button2 );
+		  //// Display the form as a modal dialog box.
+		  //form1->ShowDialog();
+		
 
 	};
 	

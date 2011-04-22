@@ -45,23 +45,23 @@ void InstructorContent::user::set(User** userIn) {
 
 ManageQuizzesPanel::ManageQuizzesPanel(User ** userIn) : InstructorContent(userIn) {
 
-	Label^ contentLabel = gcnew Label();
-	contentLabel->Text = gcnew String("Your Courses and Quizzes");
-	contentLabel->Font = gcnew Drawing::Font("Times New Roman", 16, FontStyle::Bold, GraphicsUnit::Pixel);
-	contentLabel->AutoSize = true;
-	contentLabel->Location = Point(20, 20);
-	Controls->Add(contentLabel);
+	//Label^ contentLabel = gcnew Label();
+	//contentLabel->Text = gcnew String("Your Courses and Quizzes");
+	//contentLabel->Font = gcnew Drawing::Font("Times New Roman", 16, FontStyle::Bold, GraphicsUnit::Pixel);
+	//contentLabel->AutoSize = true;
+	//contentLabel->Location = Point(20, 20);
+	//Controls->Add(contentLabel);
 
-	Course** temp = (*(userIn))->getClasses();
+	//Course** temp = (*(userIn))->getClasses();
 
-	classes = gcnew array<ManageQuizList^>((*(userIn))->getClassCount());
+	//classes = gcnew array<ManageQuizList^>((*(userIn))->getClassCount());
 
-	for (int i = 0; i < classes->Length; i++) {
-		classes[i] = gcnew ManageQuizList((*(temp + i)));
-		classes[i]->Height = 200;
-		classes[i]->Location = Point(20, 50 + (i * 220));
-		Controls->Add(classes[i]);
-	}
+	//for (int i = 0; i < classes->Length; i++) {
+	//	classes[i] = gcnew ManageQuizList((*(temp + i)));
+	//	classes[i]->Height = 200;
+	//	classes[i]->Location = Point(20, 50 + (i * 220));
+	//	Controls->Add(classes[i]);
+	//}
 
 }
 

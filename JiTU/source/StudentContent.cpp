@@ -24,45 +24,47 @@ TakeQuizPanel::TakeQuizPanel(User** userIn, int wIn) : StudentContent(userIn) {
 
 SelectQuizPanel::SelectQuizPanel(User** userIn) {
 
-	Dock = DockStyle::Fill;
-	this->Padding = Forms::Padding(0, 30, 0, 0);
-	Course** temp = (*userIn)->getClasses();
-	this->View = Forms::View::LargeIcon;
-		
-	ImageList^ largeImages = gcnew ImageList();
-	largeImages->Images->Add(Image::FromFile(gcnew String("test_on.gif")));
-	largeImages->ImageSize = Drawing::Size(50, 50);
-	LargeImageList = largeImages;
-	
+	//Dock = DockStyle::Fill;
+	//this->Padding = Forms::Padding(0, 30, 0, 0);
 
-	this->Columns->Add(gcnew String("classes"), gcnew String("Course"));
+	////Course** temp = (*userIn)->getClasses();
 
-	classes = gcnew array<ListViewGroup^>((*userIn)->getClassCount());
-	quizzes = gcnew array<array<SelectQuizItem^>^>(classes->Length);
+	//this->View = Forms::View::LargeIcon;
+	//	
+	//ImageList^ largeImages = gcnew ImageList();
+	//largeImages->Images->Add(Image::FromFile(gcnew String("test_on.gif")));
+	//largeImages->ImageSize = Drawing::Size(50, 50);
+	//LargeImageList = largeImages;
+	//
 
-	this->Groups->Clear();
+	//this->Columns->Add(gcnew String("classes"), gcnew String("Course"));
 
-	for (int i = 0; i < classes->Length; i++) {
-		classes[i] = gcnew ListViewGroup(ManagedToStd::toManaged((*(temp + i))->getCourseName()), HorizontalAlignment::Left);
-		this->Groups->Add(classes[i]);
-	}
+	////classes = gcnew array<ListViewGroup^>((*userIn)->getClassCount());
+	////quizzes = gcnew array<array<SelectQuizItem^>^>(classes->Length);
 
-	this->Activation = ItemActivation::TwoClick;
+	//this->Groups->Clear();
+
+	//for (int i = 0; i < classes->Length; i++) {
+	//	classes[i] = gcnew ListViewGroup(ManagedToStd::toManaged((*(temp + i))->getCourseName()), HorizontalAlignment::Left);
+	//	this->Groups->Add(classes[i]);
+	//}
+
+	//this->Activation = ItemActivation::TwoClick;
 
 
-	for (int i = 0; i < quizzes->Length; i++) {
-		Quiz** tempQuizzes = (*(temp + i))->getQuizzes();
-		quizzes[i] = gcnew array<SelectQuizItem^>((*(temp + i))->getCount());
-		for (int j = 0; j < quizzes[i]->Length; j++) {
-			quizzes[i][j] = gcnew SelectQuizItem(ManagedToStd::toManaged((*(tempQuizzes + j))->getTitle()), 0, classes[i]);
-			quizzes[i][j]->setQuiz((*(tempQuizzes + j)));
-			Items->Add(quizzes[i][j]);
-		}
+	//for (int i = 0; i < quizzes->Length; i++) {
+	//	Quiz** tempQuizzes = (*(temp + i))->getQuizzes();
+	//	quizzes[i] = gcnew array<SelectQuizItem^>((*(temp + i))->getCount());
+	//	for (int j = 0; j < quizzes[i]->Length; j++) {
+	//		quizzes[i][j] = gcnew SelectQuizItem(ManagedToStd::toManaged((*(tempQuizzes + j))->getTitle()), 0, classes[i]);
+	//		quizzes[i][j]->setQuiz((*(tempQuizzes + j)));
+	//		Items->Add(quizzes[i][j]);
+	//	}
 
-	}
-	
-	this->ShowGroups = true;
-	
+	//}
+	//
+	//this->ShowGroups = true;
+	//
 
 }
 

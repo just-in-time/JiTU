@@ -98,37 +98,6 @@ void GeneralUI::exitItemClicked(Object^ sender, EventArgs^ e)	{
 
 void loadDummyData(User** userObject) {
 
-	Course	*	temp		= new Course(0);
-	Course	*	temp1		= new Course(1);
-	Quiz	*	quiz1		= new Quiz(0);
-	Quiz	*	quiz2		= new Quiz(1);
-	Question*	quest1		= new Question(0);
-	Answer	*	ans1		= new Answer(0);
-	Answer	*	ans2		= new Answer(1);
-
-	ans1->setText("blah1");
-	ans1->setTrue();
-	ans2->setText("This is just another Example");
-
-
-
-	quest1->setText("Blah Question");
-	quest1->addAnswer(ans1);
-	quest1->addAnswer(ans2);
-	quest1->addAnswer(ans2);
-	quest1->addAnswer(ans2);
-	quiz1->addQuestion(quest1);
-	quiz1->setTitle("Quiz 1");
-	for (int i = 0; i < 20; i++)
-		quiz2->addQuestion(quest1);
-	quiz2->setTitle("Quiz 2");
-	temp->addQuiz(quiz1);
-	temp->setCourseName("CSE201");
-	temp1->addQuiz(quiz2);
-	temp1->addQuiz(quiz1);
-	temp1->setCourseName("CSE202");
-	(*userObject)->addClass(temp);
-	(*userObject)->addClass(temp1);
 
 }
 
@@ -137,7 +106,6 @@ void loadDummyData(User** userObject) {
 void GeneralUI::loggedIn(Object^ sender, EventArgs^ e) {
 
 	content = gcnew ContentWindow(mainUser);
-	loadDummyData(this->mainUser);
 	logoutItem = gcnew ToolStripMenuItem(gcnew String("Logout"));
 	
 	fileItem->DropDownItems->Remove(exitItem);

@@ -41,6 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="C:\Users\Robert\Desktop\JiTU\JiTU\include"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="0"
 				RuntimeLibrary="3"
@@ -196,66 +197,90 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\main.cpp"
+				RelativePath=".\source\main.cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\User.cpp"
-				>
-			</File>
-			<Filter
-				Name="GUI"
-				>
-				<File
-					RelativePath=".\ContentWindow.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\GeneralUI.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\InstructorContent.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\LoginWindow.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\StudentContent.cpp"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="Entities"
-				>
-				<File
-					RelativePath=".\Course.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\entityBase.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\Quiz.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\UserEntity.cpp"
-					>
-				</File>
-			</Filter>
 			<Filter
 				Name="Controllers"
 				>
 				<File
-					RelativePath=".\SecurityControl.cpp"
+					RelativePath=".\source\UserController.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Entity"
+				>
+				<File
+					RelativePath=".\source\CourseEntity.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\UserController.cpp"
+					RelativePath=".\source\entityBase.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\UserEntity.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="GUI"
+				>
+				<File
+					RelativePath=".\source\ActivityMenu.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\ContentWindow.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\GeneralUI.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\InstructorContent.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\InstructorMenu.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\LoginWindow.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\StudentContent.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\StudentMenu.cpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Data"
+				>
+				<File
+					RelativePath=".\source\Answer.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\Course.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\Question.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\Quiz.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\source\User.cpp"
 					>
 				</File>
 			</Filter>
@@ -266,70 +291,98 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\ManagedToStd.h"
+				RelativePath=".\include\ManagedToStd.h"
 				>
 			</File>
 			<File
-				RelativePath=".\stdafx.h"
+				RelativePath=".\include\stdafx.h"
 				>
 			</File>
-			<File
-				RelativePath=".\User.h"
-				>
-			</File>
-			<Filter
-				Name="GUI"
-				>
-				<File
-					RelativePath=".\ContentWindow.h"
-					>
-				</File>
-				<File
-					RelativePath=".\GeneralUI.h"
-					>
-				</File>
-				<File
-					RelativePath=".\InstructorContent.h"
-					>
-				</File>
-				<File
-					RelativePath=".\LoginWindow.h"
-					>
-				</File>
-				<File
-					RelativePath=".\StudentContent.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="Entities"
-				>
-				<File
-					RelativePath=".\Course.h"
-					>
-				</File>
-				<File
-					RelativePath=".\entityBase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Quiz.h"
-					>
-				</File>
-				<File
-					RelativePath=".\UserEntity.h"
-					>
-				</File>
-			</Filter>
 			<Filter
 				Name="Controllers"
 				>
 				<File
-					RelativePath=".\SecurityControl.h"
+					RelativePath=".\include\SecurityControl.h"
 					>
 				</File>
 				<File
-					RelativePath=".\UserController.h"
+					RelativePath=".\include\UserController.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Entity"
+				>
+				<File
+					RelativePath=".\include\CourseEntity.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\entityBase.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\UserEntity.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="GUI"
+				>
+				<File
+					RelativePath=".\include\ActivityMenu.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\ContentWindow.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\GeneralUI.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\InstructorContent.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\InstructorMenu.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\LoginWindow.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\StudentContent.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\StudentMenu.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Data"
+				>
+				<File
+					RelativePath=".\include\Answer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\Course.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\Question.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\Quiz.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\User.h"
 					>
 				</File>
 			</Filter>

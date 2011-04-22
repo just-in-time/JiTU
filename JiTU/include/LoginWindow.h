@@ -3,7 +3,6 @@
 
 #include "stdafx.h"
 #include "User.h"
-//#include "SecurityControl.h"
 #include "UserController.h"
 
 #define CENTER_HEIGHT	(250)

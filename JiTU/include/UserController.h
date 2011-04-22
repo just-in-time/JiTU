@@ -11,9 +11,21 @@ using namespace System;
 ref class UserController
 {
 public:
+	/**
+	 *	Constructor for UserController
+	 *
+	 *  @param userIn the user to be associated with this controller
+	 */
 	UserController(User** userIn);
-
-	bool isValidUser(String^ userName);
+	
+	/**
+	 *	Retrieves user data from the user entity
+     *
+	 *	@param userName name to search for
+	 *  @param password password to check for
+	 *	@throw Exception the username not found or password is invalid
+	 */
+	void authenticateUser(String^ userName, String^ password);
 
 
 private:

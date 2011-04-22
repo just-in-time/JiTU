@@ -118,17 +118,10 @@ void LoginWindow::login(System::Object ^ se, System::Windows::Forms::KeyEventArg
 }
 
 void LoginWindow::login() {
-	/* OLD CODE
-	loginController = new SecurityControl(mainUser);
-	if (loginController->checkUsername(usernameBox->Text))
-		if (loginController->checkPassword(passwordBox->Text))
-			delete this;
-	*/
-	
 	try {
 
 	userController = gcnew UserController(mainUser);
-	userController->isValidUser(usernameBox->Text);
+	userController->authenticateUser(usernameBox->Text, passwordBox->Text);
 	delete this;
 
 	} catch(Exception^ e) {

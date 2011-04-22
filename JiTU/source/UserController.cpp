@@ -17,29 +17,32 @@ UserController::UserController(User ** userIn)
 	userEntity = gcnew UserEntity(); //creates our user entity to be used
 									 // in this controller
 
-
-
-	*user = new User(0);
-	(*user)->setRole(0);
+	*user = new User(0); //create an instance of User
 
 
 }
 
-bool UserController::isValidUser(System::String ^userName)
-{
 
+void UserController::authenticateUser(String^ userName, String^ password)
+{
+	/* get user and check username*/
 	try
 	{
-		
 		*user = userEntity->GetUser(userName);
 	}
 	catch (MySqlException^ e)
 	{
+	    delete *user;
 		*user = NULL;
-		//throw gcnew System::Exception(e->Message, e->InnerException);
+		throw gcnew System::Exception(e->Message, e->InnerException);
 	}
 
-	
-
-	return (*user != NULL);
+	/* check passwords match */
+	if ( password->CompareTo( ManagedToStd::toManaged( (*user)->getPassword() ) ) )
+	{
+		//they dont match
+		delete *user;
+		*user = NULL;
+		throw gcnew System::Exception(gcnew String("The passwords do not match"));
+	}
 }

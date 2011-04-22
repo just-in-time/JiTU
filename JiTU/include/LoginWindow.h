@@ -46,7 +46,6 @@ private:
 	Drawing::Image^ loginButtonBack;
 
 	User** mainUser;
-	//SecurityControl* loginController; //old code
 	UserController^ userController;
 
 	void initializeComponents();	

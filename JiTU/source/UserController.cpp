@@ -30,7 +30,7 @@ void UserController::authenticateUser(String^ userName, String^ password)
 	{
 		*user = userEntity->GetUser(userName);
 	}
-	catch (MySqlException^ e)
+	catch (System::Exception^ e)
 	{
 	    delete *user;
 		*user = NULL;

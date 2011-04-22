@@ -85,13 +85,8 @@ User * UserEntity::GetUser(System::String ^ UserName)
 
 	try
 	{
-		String^ temp;
-		if (!UserName->CompareTo(""))
-			temp = gcnew String("NULL");
-		else
-			temp = gcnew String(UserName);
 
-		this->SQL = gcnew String("SELECT * FROM users u WHERE u.user_name = \"" + temp + "\";");
+		this->SQL = gcnew String("SELECT * FROM users u WHERE u.user_name = \"" + UserName + "\";");
 		this->InitializeCommand();
 		this->OpenConnection();
 

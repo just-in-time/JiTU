@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="C:\Users\Robert\Desktop\JiTU\JiTU\include"
+				AdditionalIncludeDirectories="$(SolutionDir)\JiTU\include"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="0"
 				RuntimeLibrary="3"

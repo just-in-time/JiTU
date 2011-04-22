@@ -85,11 +85,18 @@ User * UserEntity::GetUser(System::String ^ UserName)
 
 	try
 	{
-		this->SQL = "SELECT * FROM `users` u WHERE u.`user_name` = " + UserName + ";";
+		String^ temp;
+		if (!UserName->CompareTo(""))
+			temp = gcnew String("NULL");
+		else
+			temp = gcnew String(UserName);
+
+		this->SQL = gcnew String("SELECT * FROM users u WHERE u.user_name = \"" + temp + "\";");
 		this->InitializeCommand();
 		this->OpenConnection();
 
 		this->DataReader = this->Command->ExecuteReader();
+	
 
 		if (this->DataReader->HasRows)
 		{

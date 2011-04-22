@@ -53,7 +53,7 @@ int Course::getCount		() {
 
 string Course::getCourseName() {
 
-	return courseName;
+	return *courseName;
 }
 
 #pragma endregion

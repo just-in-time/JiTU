@@ -21,7 +21,7 @@ void entityBase::AddParameter(System::String ^ name, MySql::Data::MySqlClient::M
 
 void entityBase::CloseConnection()
 {
-	this->Connection->Close();
+	Connection->Close();
 }
 
 int entityBase::ExecuteStoredProcedure()

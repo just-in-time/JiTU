@@ -7,6 +7,7 @@ User::User(int id) {
 	this->id = id;
 	this->username = new string;
 	this->password = new string;
+	this->fullname = new string;
 	this->role = 0;
 	this->classes = new Course*;
 	*(this->classes) = 0;

@@ -17,7 +17,7 @@ public:
 
 	}
 
-	static std::string* toStd(String^ strIn) {
+	static std::string toStd(String^ strIn) {
 		string * returnValue;
 		char * temp = new char[strIn->Length + 1];
 	
@@ -26,7 +26,7 @@ public:
 		
 		*(temp + strIn->Length) = 0;
 		returnValue = new string(temp);
-		return returnValue;
+		return *returnValue;
 	}
 
 

@@ -61,7 +61,7 @@ void UserEntity::DeleteUser(User * theUser)
 {
 	try
 	{
-		this->SQL = "DELETE FROM `users` WHERE `user_id` = " + theUser->getID() + ";";
+		this->SQL = "DELETE FROM `users` WHERE `user_id` = " + (theUser)->getID() + ";";
 		this->InitializeCommand();
 		this->OpenConnection();
 
@@ -102,11 +102,11 @@ User * UserEntity::GetUser(System::String ^ UserName)
 		{
 			this->DataReader->Read();
 
-			newUser = new User((int)this->DataReader["user_id"]);
-			newUser->setFullName(*(ManagedToStd::toStd(this->DataReader["full_name"]->ToString())));
-			newUser->setPassword(*(ManagedToStd::toStd(this->DataReader["password"]->ToString())));
-			newUser->setRole((int)this->DataReader["role_id"]);
-			newUser->setUsername(*(ManagedToStd::toStd(this->DataReader["user_name"]->ToString())));
+			newUser = new User(DataReader->GetUInt32("user_id"));
+			newUser->setFullName(ManagedToStd::toStd(DataReader->GetString("full_name")));
+			newUser->setPassword(ManagedToStd::toStd(DataReader->GetString("password")));
+			newUser->setRole(DataReader->GetUInt32("role_id"));
+			newUser->setUsername(ManagedToStd::toStd(DataReader->GetString("user_name")));
 		}
 		else
 			throw gcnew System::Exception("The user name \"" + UserName + "\" was not found in the database.");
@@ -142,10 +142,10 @@ User * UserEntity::GetUser(int UserID)
 			this->DataReader->Read();
 
 			newUser = new User((int)this->DataReader["user_id"]);
-			newUser->setFullName(*(ManagedToStd::toStd(this->DataReader["full_name"]->ToString())));
-			newUser->setPassword(*(ManagedToStd::toStd(this->DataReader["password"]->ToString())));
+			newUser->setFullName((ManagedToStd::toStd(this->DataReader["full_name"]->ToString())));
+			newUser->setPassword((ManagedToStd::toStd(this->DataReader["password"]->ToString())));
 			newUser->setRole((int)this->DataReader["role_id"]);
-			newUser->setUsername(*(ManagedToStd::toStd(this->DataReader["user_name"]->ToString())));
+			newUser->setUsername((ManagedToStd::toStd(this->DataReader["user_name"]->ToString())));
 		}
 		else
 			throw gcnew System::Exception("The user ID \"" + UserID + "\" was not found in the database.");

@@ -39,7 +39,7 @@ Course * CourseEntity::GetCourse(int CourseID)
 			this->DataReader->Read();
 
 			newCourse = new Course((int)this->DataReader["course_id"]);
-			newCourse->setCourseName(*(ManagedToStd::toStd(this->DataReader["name"]->ToString())));
+			newCourse->setCourseName((ManagedToStd::toStd(this->DataReader["name"]->ToString())));
 		}
 		else
 			throw gcnew System::Exception("The course ID \"" + CourseID + "\" was not found in the database.");
@@ -74,7 +74,7 @@ Course * CourseEntity::GetCourse(System::String^ CourseName)
 			this->DataReader->Read();
 
 			newCourse = new Course((int)this->DataReader["course_id"]);
-			newCourse->setCourseName(*(ManagedToStd::toStd(this->DataReader["name"]->ToString())));
+			newCourse->setCourseName((ManagedToStd::toStd(this->DataReader["name"]->ToString())));
 		}
 		else
 			throw gcnew System::Exception("The course name \"" + CourseName + "\" was not found in the database.");

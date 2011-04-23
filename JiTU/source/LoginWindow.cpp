@@ -11,9 +11,6 @@ using namespace System::Windows::Forms;
 LoginWindow::LoginWindow(int xIn, int yIn, User** userIn)	: Panel()	{
 	/* set local to userIn */
 	mainUser = userIn;
-	
-	/* create usercontroller */
-	userController = gcnew UserController(mainUser);
 
 	/* creat GUI */
 	SuspendLayout();
@@ -95,7 +92,7 @@ void LoginWindow::initializeComponents() {
 	loginButtonPanel = gcnew Panel();
 	loginButton = gcnew Button();
 	usernameBox = gcnew TextBox();
-	passwordBox = gcnew MaskedTextBox();
+	passwordBox = gcnew PasswordBox();
 	usernameLabel = gcnew Label();
 	passwordLabel = gcnew Label();
 	mainLabel = gcnew Label();
@@ -124,12 +121,17 @@ void LoginWindow::login(System::Object ^ se, System::Windows::Forms::KeyEventArg
 void LoginWindow::login() {	
 	try {
 	
+	userController = gcnew UserController(mainUser);
+
+	String^ temp = passwordBox->Text;
 	//try to authenticate user
-	userController->authenticateUser(usernameBox->Text, passwordBox->Text);
+	userController->authenticateUser(usernameBox->Text, passwordBox->Password);
 
 	delete this;
 
 	} catch(Exception^ e) {
+
+		delete userController;
 
 		MessageBox::Show(gcnew String("Username or Password not Valid"));
 

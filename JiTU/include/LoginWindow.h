@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "User.h"
 #include "UserController.h"
+#include "PasswordBox.h"
 
 #define CENTER_HEIGHT	(250)
 #define CENTER_WIDTH	(400)
@@ -39,7 +40,7 @@ private:
 	TextBox^		usernameBox;
 
 	Label^			passwordLabel;
-	MaskedTextBox^	passwordBox;
+	PasswordBox^	passwordBox;
 
 	Panel^			loginButtonPanel;
 	Button^			loginButton;

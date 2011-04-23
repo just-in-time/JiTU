@@ -200,6 +200,14 @@
 				RelativePath=".\source\main.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\source\SecurityFunction.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\source\StudentContent.cpp"
+				>
+			</File>
 			<Filter
 				Name="Controllers"
 				>
@@ -252,7 +260,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\source\StudentContent.cpp"
+					RelativePath=".\source\PasswordBox.cpp"
 					>
 				</File>
 				<File
@@ -292,6 +300,10 @@
 			>
 			<File
 				RelativePath=".\include\ManagedToStd.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SecurityFunction.h"
 				>
 			</File>
 			<File
@@ -351,6 +363,10 @@
 				</File>
 				<File
 					RelativePath=".\include\LoginWindow.h"
+					>
+				</File>
+				<File
+					RelativePath=".\include\PasswordBox.h"
 					>
 				</File>
 				<File
